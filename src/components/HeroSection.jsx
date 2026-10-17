@@ -56,7 +56,7 @@ const OrbitingDecoration = ({ icon: Icon, delay, className, isRevealed, enableAm
       y: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
       scale: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
     }}
-    className={`absolute flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/10 dark:border-white/15 bg-white/60 dark:bg-white/5 backdrop-blur-lg shadow-[0_10px_30px_rgba(0,0,0,0.12)] ${className}`}
+    className={`absolute flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/10 dark:border-white/15 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,0.12)] ${className}`}
     style={enableAmbientMotion && isRevealed ? {
       animation: `hero-float 5.8s ${delay + 0.35}s ease-in-out infinite`,
       willChange: 'transform',
@@ -160,7 +160,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
         initial={false}
         animate={isRevealed ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        style={enableParallax ? { y: bgY } : undefined}
+        style={enableParallax ? { y: bgY, willChange: 'transform' } : undefined}
         className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center"
       >
 
@@ -193,7 +193,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
       {/* ── MAIN CONTENT (PERFECTLY CENTERED) ── */}
       {/* Parallax wrapper (scroll-driven y only) */}
       <Gsap.div
-        style={enableParallax ? { y: contentY } : undefined}
+        style={enableParallax ? { y: contentY, willChange: 'transform' } : undefined}
         className="relative z-10 w-full max-w-[1200px] px-5 sm:px-6 md:px-12 flex flex-col items-center text-center mt-8"
       >
         {/* Iris reveal + entrance wrapper */}
