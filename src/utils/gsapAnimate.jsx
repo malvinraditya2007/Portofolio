@@ -416,10 +416,7 @@ export const useGsapScroll = ({ target } = {}) => {
   const scrollYProgress = useGsapMotionValue(0);
 
   useEffect(() => {
-    let rafId = null;
-
-    const compute = () => {
-      rafId = null;
+    const update = () => {
       const element = target?.current;
       if (!element) {
         const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -427,28 +424,18 @@ export const useGsapScroll = ({ target } = {}) => {
         return;
       }
 
-      // getBoundingClientRect() forces a layout reflow, so it must run at most
-      // once per animation frame — never directly inside the scroll handler.
       const rect = element.getBoundingClientRect();
       const total = rect.height + window.innerHeight;
       const passed = window.innerHeight - rect.top;
       scrollYProgress.set(Math.max(0, Math.min(1, passed / total)));
     };
 
-    // Throttle to one measurement per frame. Scroll events can fire more often
-    // than the display refresh rate; coalescing them into rAF keeps the single
-    // reflow synchronized with the browser's paint cycle and removes jank.
-    const schedule = () => {
-      if (rafId === null) rafId = requestAnimationFrame(compute);
-    };
-
-    compute();
-    window.addEventListener('scroll', schedule, { passive: true });
-    window.addEventListener('resize', schedule, { passive: true });
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
     return () => {
-      if (rafId !== null) cancelAnimationFrame(rafId);
-      window.removeEventListener('scroll', schedule);
-      window.removeEventListener('resize', schedule);
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
     };
   }, [scrollYProgress, target]);
 
