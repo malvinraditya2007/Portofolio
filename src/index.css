@@ -113,19 +113,6 @@ body {
   overscroll-behavior: none;
 }
 
-/* Custom Text Selection Color */
-::selection {
-  background-color: #a3e635;
-  /* lime-400 */
-  color: #000000;
-}
-
-::-moz-selection {
-  background-color: #a3e635;
-  /* lime-400 */
-  color: #000000;
-}
-
 /* Lenis Recommended Styles */
 html.lenis,
 html.lenis body {

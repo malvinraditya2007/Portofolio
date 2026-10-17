@@ -56,7 +56,7 @@ export default function Home() {
   }, [navigate, location]);
 
   return (
-    <div className="bg-[#FAF9F6] dark:bg-[#0A0A0A] text-black dark:text-white selection:bg-lime-400 selection:text-black relative transition-colors duration-500">
+    <div className="bg-[#FAF9F6] dark:bg-[#0A0A0A] text-black dark:text-white relative transition-colors duration-500">
       {enableNoiseOverlay && <Suspense fallback={null}><NoiseOverlay /></Suspense>}
 
       <Cursor />

@@ -85,7 +85,7 @@ const AboutSection = memo(function AboutSection() {
               <div className="bg-white dark:bg-white/[0.05] border border-black/[0.08] dark:border-white/[0.1] rounded-[3px] py-3.5 px-4">
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-black/32 dark:text-white/40 mb-1.5">Status</p>
                 <div className="flex items-center gap-2">
-                  <span className="w-[6px] h-[6px] rounded-full bg-black/40 dark:bg-white/40 shrink-0" />
+                  <span className="w-[6px] h-[6px] rounded-full bg-lime-500 shrink-0 select-none" />
                   <span className="text-[13px] font-bold text-black dark:text-white">Available</span>
                 </div>
               </div>
