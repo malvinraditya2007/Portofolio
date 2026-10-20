@@ -29,6 +29,7 @@ export const project = {
     "Builds trust between users through ratings and a reputation system.",
   ],
   links: {
+    live: "https://pinjemin-frontend.vercel.app/",
     repo: "https://github.com/malvinraditya2007/Pinjemin",
   },
 };

@@ -4,19 +4,14 @@ import { Gsap } from "../utils/gsapAnimate";
 // Simple Icons (brand icons) from react-icons
 import {
     SiPython,
-    SiTypescript,
     SiJavascript,
     SiC,
     SiTensorflow,
     SiPytorch,
-    SiKeras,
-    SiScikitlearn,
-    SiOpencv,
     SiStreamlit,
     SiNumpy,
     SiPandas,
     SiReact,
-    SiNextdotjs,
     SiTailwindcss,
     SiHtml5,
     SiCss3,
@@ -32,7 +27,7 @@ import {
 import { FaJava } from "react-icons/fa";
 
 // Lucide icons for generic concepts
-import { Network, Database } from "lucide-react";
+import { Database } from "lucide-react";
 
 const stackCategories = [
     {
@@ -40,23 +35,17 @@ const stackCategories = [
         description: "Programming languages",
         skills: [
             { name: "Python", icon: SiPython },
-            { name: "TypeScript", icon: SiTypescript },
             { name: "JavaScript", icon: SiJavascript },
             { name: "Java", icon: FaJava },
             { name: "C", icon: SiC },
-            { name: "SQL", icon: Database },
         ]
     },
     {
         title: "AI & Machine Learning",
         description: "Intelligent systems & models",
         skills: [
-            { name: "Deep Learning", icon: Network },
             { name: "TensorFlow", icon: SiTensorflow },
             { name: "PyTorch", icon: SiPytorch },
-            { name: "Keras", icon: SiKeras },
-            { name: "Scikit-Learn", icon: SiScikitlearn },
-            { name: "OpenCV", icon: SiOpencv },
             { name: "Numpy", icon: SiNumpy },
             { name: "Pandas", icon: SiPandas },
         ]
@@ -66,7 +55,6 @@ const stackCategories = [
         description: "Interactive web interfaces",
         skills: [
             { name: "React", icon: SiReact },
-            { name: "Next.js", icon: SiNextdotjs },
             { name: "Tailwind CSS", icon: SiTailwindcss },
             { name: "HTML", icon: SiHtml5 },
             { name: "CSS", icon: SiCss3 },

@@ -1,14 +1,6 @@
 export const PROJECT_META = [
   {
     id: 1,
-    slug: "vidnote",
-    title: "VidNote",
-    category: "Local AI / Speech Processing",
-    color: "bg-lime-400",
-    img: "/images/projects/vidnote-frontpage.webp",
-  },
-  {
-    id: 2,
     slug: "sentimenid",
     title: "SentimenID",
     category: "NLP / Machine Learning",
@@ -16,7 +8,7 @@ export const PROJECT_META = [
     img: "/images/projects/sentimenid-frontpage.webp",
   },
   {
-    id: 3,
+    id: 2,
     slug: "trashclassifier",
     title: "TrashClassifier",
     category: "Computer Vision",
@@ -24,12 +16,20 @@ export const PROJECT_META = [
     img: "/images/projects/trashclassifier-frontpage.webp",
   },
   {
-    id: 4,
+    id: 3,
     slug: "pinjemin",
     title: "Pinjemin",
     category: "Peer-to-Peer Lending Platform",
     color: "bg-sky-400",
     img: "/images/projects/pinjemin-frontpage.webp",
+  },
+  {
+    id: 4,
+    slug: "vidnote",
+    title: "VidNote",
+    category: "Local AI / Speech Processing",
+    color: "bg-lime-400",
+    img: "/images/projects/vidnote-frontpage.webp",
   },
   {
     id: 5,
