@@ -24,7 +24,6 @@ import {
     SiDocker,
     SiGit,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 
 const stackCategories = [
     {
@@ -33,7 +32,6 @@ const stackCategories = [
         skills: [
             { name: "Python", icon: SiPython },
             { name: "JavaScript", icon: SiJavascript },
-            { name: "Java", icon: FaJava },
             { name: "C", icon: SiC },
         ]
     },
