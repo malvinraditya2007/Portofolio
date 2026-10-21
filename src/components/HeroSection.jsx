@@ -79,16 +79,10 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
   const [enableParallax, setEnableParallax] = useState(false);
   const [enableAmbientMotion, setEnableAmbientMotion] = useState(false);
   const [showCvPreview, setShowCvPreview] = useState(false);
-  const [cvIframeReady, setCvIframeReady] = useState(false);
 
-  // Lock body scroll + close on Escape while the CV preview is open.
-  // Defer mounting the PDF iframe so the modal can open smoothly before the
-  // (relatively heavy) PDF viewer starts loading.
+  // Lock body scroll + pause Lenis while CV preview is open
   useEffect(() => {
-    if (!showCvPreview) {
-      setCvIframeReady(false);
-      return;
-    }
+    if (!showCvPreview) return;
 
     const onKeyDown = (e) => {
       if (e.key === 'Escape') setShowCvPreview(false);
@@ -96,13 +90,12 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', onKeyDown);
-
-    const iframeTimer = setTimeout(() => setCvIframeReady(true), 250);
+    if (window.lenisInstance) window.lenisInstance.stop();
 
     return () => {
       document.body.style.overflow = prevOverflow;
       window.removeEventListener('keydown', onKeyDown);
-      clearTimeout(iframeTimer);
+      if (window.lenisInstance) window.lenisInstance.start();
     };
   }, [showCvPreview]);
 
@@ -115,8 +108,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
   const bgY = useGsapTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const contentY = useGsapTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
-  // Pause hero ambient motion while the CV preview modal is open to free up
-  // resources for the PDF viewer.
+  // Pause hero ambient motion while the CV preview modal is open to free up resources.
   const ambientActive = enableAmbientMotion && !showCvPreview;
 
   useEffect(() => {
@@ -307,13 +299,14 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
 
           {/* Panel */}
           <div
+            data-lenis-prevent
             className="relative z-10 flex flex-col w-full max-w-3xl h-[85vh] bg-white dark:bg-neutral-900 border border-black/10 dark:border-white/10 shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header bar */}
             <div className="flex items-center justify-between gap-3 px-4 sm:px-5 py-3 border-b border-black/10 dark:border-white/10 shrink-0">
               <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black dark:text-white truncate">
-Malvin Raditya - CV
+                Malvin Raditya - CV
               </span>
               <div className="flex items-center gap-2 shrink-0">
                 <a
@@ -333,22 +326,19 @@ Malvin Raditya - CV
               </div>
             </div>
 
-            {/* PDF viewer — mounted after a short delay so the modal opens smoothly */}
-            <div className="flex-1 w-full bg-neutral-100 dark:bg-neutral-800 relative">
-              {cvIframeReady ? (
-                <iframe
-                  src="/Malvin-Raditya-CV.pdf#toolbar=0&navpanes=0&view=FitH"
-                  title="CV Preview"
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full"
+            {/* CV preview image (WebP) — fast, responsive, crystal sharp, works across all mobile & desktop browsers */}
+            <div
+              data-lenis-prevent
+              className="flex-1 min-h-0 w-full bg-neutral-100 dark:bg-neutral-800/80 overflow-y-auto overscroll-contain p-3 sm:p-6 flex justify-center"
+            >
+              <div className="max-w-2xl w-full flex flex-col items-center">
+                <img
+                  src="/Malvin-Raditya-CV.webp"
+                  alt="Malvin Raditya - CV Preview"
+                  className="w-full h-auto shadow-2xl rounded-sm border border-black/10 dark:border-white/10 select-none"
+                  loading="eager"
                 />
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-mono text-xs uppercase tracking-wider text-black/40 dark:text-white/40 animate-pulse">
-                    Loading preview…
-                  </span>
-                </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
