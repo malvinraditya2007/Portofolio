@@ -26,9 +26,6 @@ import {
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
-// Lucide icons for generic concepts
-import { Database } from "lucide-react";
-
 const stackCategories = [
     {
         title: "Languages",
@@ -70,7 +67,6 @@ const stackCategories = [
             { name: "PostgreSQL", icon: SiPostgresql },
             { name: "MySQL", icon: SiMysql },
             { name: "Prisma", icon: SiPrisma },
-            { name: "NeonDB", icon: Database },
         ]
     },
     {
