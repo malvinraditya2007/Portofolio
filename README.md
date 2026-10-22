@@ -1,49 +1,109 @@
-# Portfolio — Malvin Raditya Nugraha
+# ⚡ Malvin Raditya Nugraha — Personal Portfolio
 
-Personal portfolio website of Malvin Raditya Nugraha — AI Engineer & Full-Stack Developer based in Indonesia. Built as a high-performance, responsive single-page portfolio with pure HTML5, modern CSS, and Vanilla JavaScript.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
+
+Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-Stack Developer based in Indonesia. Designed with a dark engineering and cyberpunk-inspired aesthetic, high performance, and smooth micro-interactions.
 
 > [!NOTE]
-> The previous React 19 version of this portfolio is preserved in the [`react-version`](../../tree/react-version) Git branch.
+> This website is built using **pure Vanilla HTML5, modern CSS3, and ES6+ JavaScript** with zero external dependencies and zero bundlers. The previous React 19 version is preserved on the [`react-version`](../../tree/react-version) branch.
 
-## Features
+---
 
-- **Responsive Single-Page Layout**: Smooth layout across mobile, tablet, and desktop.
-- **Theme Switch**: Light and Dark mode with animated sun/moon SVG morphing and `localStorage` persistence.
-- **Dynamic Clocks**: Live Asia/Jakarta time in the hero section and local time in the footer.
-- **CV Preview Modal**: Interactive WebP preview with direct PDF download.
-- **Project Gallery & Case Study Modals**: In-depth modal case study for each project without page reloads (VidNote, SentimenID, Pinjemin, Tutorin, TrashClassifier).
-- **Interactive Capabilities Matrix**: Hover lighting and cascade entry effect.
-- **Custom Cursor Follower**: Smooth hardware-accelerated cursor for desktop mice.
-- **Zero Build Step**: Pure static files. No `npm install`, `node_modules`, or bundler required.
+## 🌟 Key Features
 
-## Tech Stack
+* **⚡ Zero Build Step & Ultra-Fast**: Pure static site with instant page loads, zero npm packages, and zero compilation pipeline.
+* **🌓 Dual Theme (Light & Dark)**: Smooth theme switching with animated Sun/Moon morphing and `localStorage` persistence.
+* **🕒 Live Clocks**: Real-time Asia/Jakarta timezone clock in the Hero section and dynamic local visitor time in the Footer.
+* **📄 Interactive CV Viewer**: In-modal scrollable CV preview with high-resolution rendering and instant PDF download.
+* **🚀 Project Case Study Modals**: In-depth modal dialogs for each featured project featuring architecture overviews, tech badges, and key outcomes without page reloads.
+* **🎯 Terminal-Style Core Stack**: Interactive skills matrix with official brand SVGs, tab-aligned layout, and reactive glow effects.
+* **🖱️ Custom Hardware-Accelerated Cursor**: Sleek trailing cursor for desktop mice with magnetic element interactions.
+* **📱 Fully Responsive**: Pixel-perfect adaptation across mobile, tablet, and widescreen desktop displays.
 
-- **Markup**: HTML5 (semantic, accessible)
-- **Styling**: Pure Modern CSS (CSS Variables, Flexbox, Grid, keyframe animations)
-- **Scripting**: Vanilla JavaScript (ES6+, DOM APIs, IntersectionObserver)
-- **Typography**: Space Grotesk (Google Fonts)
+---
 
-## Running Locally
+## 🛠️ Core Tech Stack
 
-Simply open `index.html` directly in any web browser, or serve it with Python/Node:
+### 💻 Programming Languages
+`Python` • `JavaScript` • `Java` • `C`
 
+### 🧠 AI & Machine Learning
+`NumPy` • `Pandas` • `Scikit-learn` • `PyTorch (Basic)`
+
+### 🌐 Web & Frontend
+`HTML5` • `CSS3` • `JavaScript (ES6+)`
+
+### ⚙️ Backend Development
+`Node.js` • `Express.js` • `FastAPI`
+
+### 🗄️ Database
+`MySQL`
+
+### 🔧 Tools & Workflow
+`GitHub` • `VS Code` • `Google Colab`
+
+---
+
+## 📂 Featured Projects
+
+| Project | Category | Description | Stack |
+| :--- | :--- | :--- | :--- |
+| **SentimenID** | Machine Learning / Web | Intelligent sentiment analysis engine for text classification | Python, Scikit-learn, FastAPI, JS |
+| **VidNote** | AI / Productivity | Automated video summarization & smart note-taking platform | Python, AI/LLM, Node.js |
+| **Pinjemin** | Web Application | Digital peer-to-peer equipment and asset lending portal | Node.js, Express, MySQL |
+| **Tutorin** | EdTech Platform | Peer-to-peer mentorship and academic learning system | JavaScript, Express, MySQL |
+| **TrashClassifier** | Deep Learning / Vision | Computer vision system for automatic recyclable waste sorting | PyTorch, Python, OpenCV |
+
+---
+
+## 🚀 Running Locally
+
+No dependencies or build tools are required. You can simply open `index.html` directly in your browser, or spin up a local development server:
+
+### Option 1: Python
 ```bash
-# Python
 python -m http.server 3000
+```
 
-# Or Node npx
+### Option 2: Node.js (npx)
+```bash
 npx serve .
 ```
 
-Open `http://localhost:3000` in your browser.
+Then visit **`http://localhost:3000`** in your browser.
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```text
-.
-├── index.html          # Main HTML structure & semantics
-├── style.css           # Styling, themes, animations, & responsive layout
-├── script.js           # Client logic, theme toggle, modals, & clocks
-├── assets/             # Images, project screenshots, CV, icons
-└── vercel.json         # Static hosting configuration for Vercel
+Portofolio/
+├── index.html           # Main semantic HTML structure & modals
+├── style.css            # Stylesheet, design tokens, themes & responsiveness
+├── script.js            # Client-side interactions, theme, modals, and clocks
+├── assets/              # Static assets & media
+│   ├── Malvin-Raditya-CV.pdf
+│   ├── Malvin-Raditya-CV.webp
+│   └── images/          # Project covers, previews, & thumbnails
+├── vercel.json          # Static hosting configuration for Vercel
+└── README.md            # Project documentation
 ```
+
+---
+
+## 📬 Connect With Me
+
+* **GitHub**: [@malvinraditya2007](https://github.com/malvinraditya2007)
+* **LinkedIn**: [Malvin Raditya Nugraha](https://www.linkedin.com/in/malvin-raditya-nugraha/)
+* **Email**: [malvinraditya2007@gmail.com](mailto:malvinraditya2007@gmail.com)
+
+---
+
+<p align="center">
+  <sub>© 2026 Malvin Raditya Nugraha. All rights reserved.</sub>
+</p>
