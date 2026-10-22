@@ -65,7 +65,9 @@ html.dark {
 }
 
 /* ── Base & Resets ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -95,7 +97,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-html, body {
+
+html,
+body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -199,6 +203,7 @@ img {
   .nav-pill-menu {
     display: flex;
   }
+
   .nav-mobile-toggle {
     display: none !important;
   }
@@ -361,15 +366,20 @@ img {
   inset: 0;
   opacity: 0.04;
   background-size: 40px 40px;
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--text-main) 1px, transparent 1px),
     linear-gradient(to bottom, var(--text-main) 1px, transparent 1px);
   animation: hero-grid-scroll 20s linear infinite;
 }
 
 @keyframes hero-grid-scroll {
-  0% { background-position: 0 0; }
-  100% { background-position: 40px 40px; }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 40px 40px;
+  }
 }
 
 .hero-plus-pattern {
@@ -433,7 +443,7 @@ img {
   box-shadow: 0 0 8px var(--lime-glow);
 }
 
-/* Orbiting Badges */
+/* Orbiting Badges (Static) */
 .orbit-badge {
   position: absolute;
   width: 2.75rem;
@@ -447,23 +457,51 @@ img {
   justify-content: center;
   box-shadow: var(--shadow-sm);
   color: var(--text-muted);
-  animation: hero-float 6s ease-in-out infinite;
+  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-@keyframes hero-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.03); }
+.orbit-badge:hover {
+  transform: scale(1.08);
+  border-color: var(--lime);
+  color: var(--text-main);
 }
 
-.orbit-1 { left: 5%; top: 5%; animation-delay: 0.2s; }
-.orbit-2 { left: 12%; bottom: 12%; animation-delay: 0.8s; }
-.orbit-3 { right: 5%; top: 10%; animation-delay: 0.4s; }
-.orbit-4 { right: 12%; bottom: 8%; animation-delay: 1.1s; }
+.orbit-1 {
+  left: 5%;
+  top: 5%;
+}
+
+.orbit-2 {
+  left: 12%;
+  bottom: 12%;
+}
+
+.orbit-3 {
+  right: 5%;
+  top: 10%;
+}
+
+.orbit-4 {
+  right: 12%;
+  bottom: 8%;
+}
 
 @media (max-width: 768px) {
-  .orbit-2, .orbit-4 { display: none !important; }
-  .orbit-1 { left: 2%; top: 0; }
-  .orbit-3 { right: 2%; top: 0; }
+
+  .orbit-2,
+  .orbit-4 {
+    display: none !important;
+  }
+
+  .orbit-1 {
+    left: 2%;
+    top: 0;
+  }
+
+  .orbit-3 {
+    right: 2%;
+    top: 0;
+  }
 }
 
 /* Hero Huge Typography */
@@ -778,7 +816,7 @@ html.dark .hero-name-2 {
   max-width: 620px;
 }
 
-.about-bio p + p {
+.about-bio p+p {
   margin-top: 1rem;
 }
 
@@ -1133,6 +1171,7 @@ html.dark .hero-name-2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (min-width: 1280px) {
   .matrix-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1266,7 +1305,9 @@ html.dark .hero-name-2 {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── Footer (Section 05) ── */
@@ -1537,7 +1578,8 @@ html.dark .hero-name-2 {
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Crucial: stops vertical stretching */
+  align-items: flex-start;
+  /* Crucial: stops vertical stretching */
 }
 
 @media (min-width: 640px) {
@@ -1557,7 +1599,8 @@ html.dark .hero-name-2 {
 
 .cv-preview-img {
   width: 100%;
-  height: auto !important; /* Preserves natural A4 aspect ratio */
+  height: auto !important;
+  /* Preserves natural A4 aspect ratio */
   display: block;
   border-radius: 4px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
