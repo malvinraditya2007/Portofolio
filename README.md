@@ -39,7 +39,7 @@ Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-
 `HTML5` • `CSS3` • `JavaScript (ES6+)`
 
 ### ⚙️ Backend Development
-`Node.js` • `Express.js` • `FastAPI`
+`Node.js` • `Express.js`
 
 ### 🗄️ Database
 `MySQL`
@@ -53,11 +53,11 @@ Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-
 
 | Project | Category | Description | Stack |
 | :--- | :--- | :--- | :--- |
-| **SentimenID** | Machine Learning / Web | Intelligent sentiment analysis engine for text classification | Python, Scikit-learn, FastAPI, JS |
-| **VidNote** | AI / Productivity | Automated video summarization & smart note-taking platform | Python, AI/LLM, Node.js |
+| **SentimenID** | Machine Learning / Web | Intelligent sentiment analysis engine for text classification | Python, Scikit-learn, Streamlit, JS |
 | **Pinjemin** | Web Application | Digital peer-to-peer equipment and asset lending portal | Node.js, Express, MySQL |
 | **Tutorin** | EdTech Platform | Peer-to-peer mentorship and academic learning system | JavaScript, Express, MySQL |
 | **TrashClassifier** | Deep Learning / Vision | Computer vision system for automatic recyclable waste sorting | PyTorch, Python, OpenCV |
+| **EUR/USD Prediction** | Machine Learning / Quant | Short-term forex close price prediction with Multiple Linear Regression | Python, NumPy, Pandas, Streamlit |
 
 ---
 

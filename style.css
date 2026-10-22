@@ -1636,6 +1636,39 @@ html.dark .hero-name-2 {
   line-height: 0.95;
 }
 
+.case-modal-role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.case-modal-role-pill .role-icon {
+  display: flex;
+  align-items: center;
+  color: var(--lime);
+}
+
+.case-modal-role-pill #case-role {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.case-modal-role-pill .role-divider {
+  color: var(--border-strong);
+}
+
+.case-modal-role-pill #case-team {
+  color: var(--text-muted);
+}
+
 .case-modal-tagline {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -1658,6 +1691,12 @@ html.dark .hero-name-2 {
   border: 1px solid var(--border);
   margin-bottom: 2.5rem;
   background: var(--bg-card);
+}
+
+.case-modal-role-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .case-modal-grid {

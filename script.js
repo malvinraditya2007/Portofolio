@@ -10,6 +10,12 @@ const PROJECTS_DATA = {
     slug: "sentimenid",
     title: "SentimenID",
     category: "NLP / Machine Learning",
+    role: "Project Lead & ML Engineer",
+    team: "Team of 3",
+    contributions: [
+      "Led a team of 3 to build an end-to-end ML pipeline, from preprocessing to a Streamlit app for tweet classification.",
+      "Built and compared KNN, Logistic Regression, Naive Bayes, and Random Forest with Count and TF-IDF, reaching 76.4% F1-score."
+    ],
     heroImg: "assets/images/projects/sentimenid-inside.webp",
     frontImg: "assets/images/projects/sentimenid-frontpage.webp",
     tagline: "A web app that detects hate speech and abusive language in Indonesian tweets using classical machine learning models.",
@@ -37,44 +43,17 @@ const PROJECTS_DATA = {
       repo: "https://github.com/malvinraditya2007/SentimenID"
     }
   },
-  vidnote: {
-    id: 2,
-    slug: "vidnote",
-    title: "VidNote",
-    category: "Local AI / Speech Processing",
-    heroImg: "assets/images/projects/vidnote-inside.webp",
-    frontImg: "assets/images/projects/vidnote-frontpage.webp",
-    tagline: "A local AI app that turns videos (files or YouTube links) into speaker-colored hardsubs, clickable transcripts, and timestamped summaries.",
-    year: "2026",
-    stack: [
-      "Python",
-      "FastAPI",
-      "Whisper",
-      "Speaker Diarization",
-      "Ollama (Gemma)",
-      "FFmpeg"
-    ],
-    features: [
-      "Video input from a file upload or a YouTube link.",
-      "Hardsub video with subtitles colored per speaker.",
-      "Clickable transcript per speaker that jumps to the matching moment.",
-      "Timestamped summary generated locally with Gemma via Ollama.",
-      "GPU/CPU fallback so the app runs on low-VRAM devices."
-    ],
-    impact: [
-      "Turns long videos into searchable notes without sending data to cloud APIs.",
-      "Makes lectures and meetings faster to review through speaker-based transcripts and summaries.",
-      "Runs fully on a personal machine, keeping private videos private."
-    ],
-    links: {
-      repo: "https://github.com/malvinraditya2007/VidNote"
-    }
-  },
   pinjemin: {
-    id: 3,
+    id: 2,
     slug: "pinjemin",
     title: "Pinjemin",
     category: "Peer-to-Peer Lending Platform",
+    role: "Project Lead & Full-Stack Developer",
+    team: "Team of 5",
+    contributions: [
+      "Led a team of 5 to build a lending platform, developing the REST APIs for the borrow request, owner approval, and item return flow.",
+      "Built the frontend with HTML, CSS, and JavaScript, including an interactive Leaflet.js location map."
+    ],
     heroImg: "assets/images/projects/pinjemin-inside.webp",
     frontImg: "assets/images/projects/pinjemin-frontpage.webp",
     tagline: "A neighborhood platform for borrowing and lending items, with owner approval and nearby-item search on an interactive map.",
@@ -106,10 +85,16 @@ const PROJECTS_DATA = {
     }
   },
   tutorin: {
-    id: 4,
+    id: 3,
     slug: "tutorin",
     title: "Tutorin",
     category: "Peer Tutoring Platform",
+    role: "Backend & Database Developer",
+    team: "Team of 3",
+    contributions: [
+      "Designed the MySQL schema with seed data for mentors, subjects, slots, and reviews.",
+      "Built the mentor flow covering profile onboarding, availability slot management, session completion, and wallet earnings with withdrawals."
+    ],
     heroImg: "assets/images/projects/tutorin-inside.webp",
     frontImg: "assets/images/projects/tutorin-frontpage.webp",
     tagline: "A commercial 1-on-1 peer tutoring platform connecting students with high-achieving mentors, with escrow payments and sessions run over Discord.",
@@ -143,10 +128,16 @@ const PROJECTS_DATA = {
     }
   },
   trashclassifier: {
-    id: 5,
+    id: 4,
     slug: "trashclassifier",
     title: "TrashClassifier",
     category: "Computer Vision",
+    role: "Machine Learning Engineer",
+    team: "Team of 5",
+    contributions: [
+      "Built an OpenCV augmentation pipeline (6 variants per image) with parallelized feature extraction via joblib.",
+      "Prevented data leakage by grouping augmented copies by source image for grouped 5-fold CV."
+    ],
     heroImg: "assets/images/projects/trashclassifier-inside.webp",
     frontImg: "assets/images/projects/trashclassifier-frontpage.webp",
     tagline: "An SVM-based waste image classifier that reaches 89.5% accuracy, served through a Streamlit web app.",
@@ -155,13 +146,14 @@ const PROJECTS_DATA = {
       "Python",
       "Scikit-learn",
       "OpenCV",
+      "Joblib",
       "SVM",
       "Streamlit",
       "Hugging Face Spaces"
     ],
     features: [
       "Image upload with instant waste category prediction.",
-      "OpenCV preprocessing before feature extraction and classification.",
+      "OpenCV preprocessing and augmentation pipeline before feature extraction.",
       "SVM model tuned with grouped 5-fold cross-validation for reliable evaluation.",
       "Deployed on Hugging Face Spaces for online access."
     ],
@@ -173,6 +165,49 @@ const PROJECTS_DATA = {
     links: {
       live: "https://huggingface.co/spaces/Gutstavo/TrashClassifier",
       repo: "https://github.com/malvinraditya2007/TrashClassifier"
+    }
+  },
+  eurusd: {
+    id: 5,
+    slug: "eurusd",
+    title: "EUR/USD Price Prediction",
+    category: "Time Series / Quantitative ML",
+    role: "Machine Learning Engineer",
+    team: "Team of 5",
+    contributions: [
+      "Preprocessed OHLC data with time-shift features, chronological split, and leakage-free Min-Max scaling.",
+      "Documented the full ML pipeline in a 10-section notebook and README."
+    ],
+    heroImg: "assets/images/projects/eurusd-inside.webp",
+    frontImg: "assets/images/projects/eurusd-frontpage.webp",
+    tagline: "A machine learning project that predicts the next 15-minute candle Close price of EUR/USD using Multiple Linear Regression built from scratch with Gradient Descent.",
+    year: "2026",
+    stack: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Gradient Descent",
+      "Streamlit",
+      "Hugging Face Spaces"
+    ],
+    features: [
+      "Multiple Linear Regression implemented from scratch in pure NumPy without third-party ML training models.",
+      "Weights and bias optimized via Gradient Descent minimizing Mean Squared Error (1,000 iterations, learning rate 0.1).",
+      "Time-shift feature engineering (predicting Close at t+1) with chronological 70/30 train-test split.",
+      "Leakage-free Min-Max normalization computed strictly on the training set.",
+      "Comprehensive Exploratory Data Analysis (EDA) with OHLC distributions, Pearson correlation heatmaps, scatter plots, and yearly boxplots.",
+      "Interactive Streamlit web app deployed on Hugging Face Spaces with live OHLC form input and trend signals (UPTREND / DOWNTREND)."
+    ],
+    impact: [
+      "Provides short-term forex direction forecasting while outperforming naive baselines.",
+      "Demonstrates core mathematical ML principles from first principles using pure vector math in NumPy.",
+      "Offers actionable visual trading signals and price delta calculations."
+    ],
+    links: {
+      live: "https://huggingface.co/spaces/MalvinR/EURUSD_Prediction_App",
+      repo: "https://github.com/malvinraditya2007/EUR-USD-Prediction"
     }
   }
 };
@@ -437,6 +472,13 @@ function populateProjectModal(project) {
   document.getElementById("case-title").textContent = project.title;
   document.getElementById("case-tagline").textContent = project.tagline;
 
+  // Role and Team
+  const roleEl = document.getElementById("case-role");
+  if (roleEl) roleEl.textContent = project.role || "Developer";
+
+  const teamEl = document.getElementById("case-team");
+  if (teamEl) teamEl.textContent = project.team || "";
+
   const heroImg = document.getElementById("case-hero-img");
   if (heroImg) {
     heroImg.src = project.heroImg;
@@ -471,6 +513,19 @@ function populateProjectModal(project) {
       Repository
     `;
     linksWrap.appendChild(repoLink);
+  }
+
+  // Role & Key Contributions
+  const contributionsList = document.getElementById("case-contributions-list");
+  if (contributionsList) {
+    contributionsList.innerHTML = "";
+    if (project.contributions && project.contributions.length > 0) {
+      project.contributions.forEach((contrib) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<span class="bullet"></span><span>${contrib}</span>`;
+        contributionsList.appendChild(li);
+      });
+    }
   }
 
   // Key Features

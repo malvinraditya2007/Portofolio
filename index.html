@@ -17,7 +17,7 @@
     rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=1.7" />
+  <link rel="stylesheet" href="style.css?v=1.8" />
 </head>
 
 <body>
@@ -383,29 +383,7 @@
           </div>
         </article>
 
-        <!-- 2. VidNote -->
-        <article class="project-card" data-slug="vidnote">
-          <div class="project-card-header">
-            <div>
-              <div class="project-card-category">
-                <span class="dot"></span>
-                Local AI / Speech Processing
-              </div>
-              <h3 class="project-card-title">VidNote</h3>
-            </div>
-            <div class="project-card-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M7 17l10-10M7 7h10v10" />
-              </svg>
-            </div>
-          </div>
-          <div class="project-card-img-wrap">
-            <img src="assets/images/projects/vidnote-frontpage.webp" alt="VidNote" class="project-card-img"
-              loading="lazy" />
-          </div>
-        </article>
-
-        <!-- 3. Pinjemin -->
+        <!-- 2. Pinjemin -->
         <article class="project-card" data-slug="pinjemin">
           <div class="project-card-header">
             <div>
@@ -427,7 +405,7 @@
           </div>
         </article>
 
-        <!-- 4. Tutorin -->
+        <!-- 3. Tutorin -->
         <article class="project-card" data-slug="tutorin">
           <div class="project-card-header">
             <div>
@@ -449,7 +427,7 @@
           </div>
         </article>
 
-        <!-- 5. TrashClassifier -->
+        <!-- 4. TrashClassifier -->
         <article class="project-card" data-slug="trashclassifier">
           <div class="project-card-header">
             <div>
@@ -467,6 +445,28 @@
           </div>
           <div class="project-card-img-wrap">
             <img src="assets/images/projects/trashclassifier-frontpage.webp" alt="TrashClassifier"
+              class="project-card-img" loading="lazy" />
+          </div>
+        </article>
+
+        <!-- 5. EUR/USD Price Prediction -->
+        <article class="project-card" data-slug="eurusd">
+          <div class="project-card-header">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                Time Series / Quantitative ML
+              </div>
+              <h3 class="project-card-title">EUR/USD Prediction</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17l10-10M7 7h10v10" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card-img-wrap">
+            <img src="assets/images/projects/eurusd-frontpage.webp" alt="EUR/USD Price Prediction"
               class="project-card-img" loading="lazy" />
           </div>
         </article>
@@ -640,14 +640,6 @@
                     d="M24 18.588l-5.69-7.147 5.485-6.849h-3.377l-3.823 4.887-3.842-4.887h-3.528l5.542 6.849-5.748 7.147h3.396l4.162-5.267 4.143 5.267h3.482zM4.093 11.233h4.636c.214-2.128-.971-3.666-3.023-3.666-1.921 0-3.138 1.419-3.266 3.666zm4.721 1.777H1.543c.128 2.457 1.666 3.752 3.708 3.752 1.543 0 2.686-.677 3.238-1.857h2.247c-.771 2.371-2.924 3.657-5.485 3.657C2.086 18.562 0 15.719 0 12.019c0-3.799 2.143-6.619 5.371-6.619 3.428 0 5.295 2.657 5.295 6.447 0 .457-.029.981-.067 1.163h-1.785z" />
                 </svg>
                 <span class="tooltip">Express.js</span>
-              </div>
-              <!-- FastAPI -->
-              <div class="stack-icon-box">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.92 18.65v-5.48H7.95l5.13-7.82v5.48h3.13l-5.13 7.82z" />
-                </svg>
-                <span class="tooltip">FastAPI</span>
               </div>
             </div>
           </div>
@@ -1025,6 +1017,17 @@
         <div class="case-modal-hero">
           <div class="case-modal-category">Project Case Study</div>
           <h2 class="case-modal-title" id="case-title">Project Title</h2>
+          <div class="case-modal-role-pill" id="case-role-pill">
+            <span class="role-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </span>
+            <span id="case-role">Role</span>
+            <span class="role-divider">•</span>
+            <span id="case-team">Team</span>
+          </div>
           <p class="case-modal-tagline" id="case-tagline">Tagline description</p>
 
           <div class="case-modal-btns" id="case-links-wrap">
@@ -1035,6 +1038,15 @@
         <!-- Cover Image -->
         <div class="case-modal-img-wrap">
           <img id="case-hero-img" src="" alt="" style="width: 100%; height: auto; display: block;" />
+        </div>
+
+        <!-- Role & Contributions Section -->
+        <div class="case-modal-role-section">
+          <div class="case-modal-section-title">
+            <span style="width: 16px; height: 1px; background: var(--border-strong);"></span>
+            My Role & Key Contributions
+          </div>
+          <ul class="case-modal-list" id="case-contributions-list"></ul>
         </div>
 
         <!-- Key Features and Impact Grid -->
@@ -1063,7 +1075,7 @@
   </div>
 
   <!-- Vanilla Script -->
-  <script src="script.js?v=1.4"></script>
+  <script src="script.js?v=1.5"></script>
 </body>
 
 </html>
