@@ -1,70 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="apple-touch-icon" href="/favicon.svg" />
-  <link rel="manifest" href="/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+  <title>MALVIN RADITYA NUGRAHA — AI Engineer & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Malvin Raditya Nugraha. AI Engineer and Full-Stack Developer specializing in Machine Learning, Deep Learning, and Modern Web Technologies. Based in Indonesia." />
+  <meta name="author" content="Malvin Raditya Nugraha" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
-  <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+  <!-- Google Fonts: Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300..700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300..700&display=swap">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 
-  <title>MALVIN RADITYA NUGRAHA</title>
-  <meta name="title" content="MALVIN RADITYA NUGRAHA">
-  <meta name="description"
-    content="Portfolio of Malvin Raditya Nugraha. AI Engineer and Full-Stack Developer specializing in Machine Learning, Deep Learning, and Modern Web Technologies. Based in Indonesia.">
-  <meta name="keywords"
-    content="AI Engineer, Full-Stack Developer, Machine Learning, Deep Learning, React, Python, Data Science, Portfolio, Malvin, Malvin Raditya Nugraha">
-  <meta name="author" content="Malvin Raditya Nugraha">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="MALVIN RADITYA NUGRAHA">
-  <meta property="og:description"
-    content="Building intelligent systems that learn, adapt, and solve complex problems. Check out my portfolio showcasing AI and Web Development projects.">
-  <meta property="og:image" content="/og-icon.png">
-
-  <meta property="twitter:card" content="summary">
-  <meta property="twitter:title" content="MALVIN RADITYA NUGRAHA">
-  <meta property="twitter:description"
-    content="Building intelligent systems that learn, adapt, and solve complex problems. Check out my portfolio showcasing AI and Web Development projects.">
-  <meta property="twitter:image" content="/og-icon.png">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Malvin Raditya Nugraha",
-    "alternateName": "Malvin",
-    "jobTitle": "AI Engineer & Full-Stack Developer",
-    "knowsAbout": ["Machine Learning", "Deep Learning", "React", "Python", "Data Science", "Full-Stack Development"],
-    "sameAs": [
-      "https://github.com/malvinraditya2007",
-      "https://www.linkedin.com/in/malvin-raditya-nugraha"
-    ]
-  }
-  </script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=1.1" />
 </head>
-
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <script type="module" src="/src/index.js"></script>
-</body>
 
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- ── 1. NAVBAR ── -->
+  <header class="navbar">
+    <!-- Logo -->
+    <div class="nav-pill nav-logo" data-scroll-to="hero-section">
+      <span>Malvin</span>
+    </div>
+
+    <!-- Desktop Navigation Capsule -->
+    <nav class="nav-pill nav-pill-menu">
+      <a href="#about-section" class="nav-link" data-scroll-to="about-section">About</a>
+      <a href="#project-section" class="nav-link" data-scroll-to="project-section">Logs</a>
+      <a href="#tech-stack-section" class="nav-link" data-scroll-to="tech-stack-section">Stack</a>
+      <a href="#capabilities-section" class="nav-link" data-scroll-to="capabilities-section">Skills</a>
+      <a href="#contact-section" class="nav-link" data-scroll-to="contact-section">Connect</a>
+    </nav>
+
+    <!-- Theme Switch & Mobile Toggle Group -->
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <!-- Theme Switch Button -->
+      <button class="nav-theme-btn theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg width="20" height="20" viewBox="0 0 25 25" fill="none">
+          <!-- Sun Icon (Light Mode) -->
+          <g class="theme-icon-sun" style="transform-origin: center; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease;">
+            <circle cx="12.4" cy="12.76" r="5" stroke="currentColor" stroke-width="2" />
+            <path d="M12.4 1.76V3.76M12.4 21.76V23.76M4.62 4.98L6.04 6.4M18.76 19.12L20.18 20.54M1.4 12.76H3.4M21.4 12.76H23.4M4.62 20.54L6.04 19.12M18.76 6.4L20.18 4.98" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </g>
+          <!-- Moon Icon (Dark Mode) -->
+          <path class="theme-icon-moon" d="M21.19 13.2C21.03 14.9 20.39 16.52 19.35 17.87C18.3 19.23 16.89 20.25 15.28 20.83C13.67 21.41 11.93 21.52 10.27 21.15C8.6 20.78 7.07 19.94 5.86 18.73C4.65 17.52 3.81 16 3.44 14.33C3.07 12.66 3.18 10.92 3.76 9.31C4.34 7.7 5.37 6.29 6.72 5.25C8.07 4.2 9.69 3.56 11.4 3.41C10.4 4.75 9.92 6.42 10.05 8.09C10.17 9.76 10.89 11.33 12.08 12.52C13.26 13.7 14.83 14.42 16.51 14.55C18.18 14.67 19.84 14.19 21.19 13.2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform-origin: center; opacity: 0; transform: scale(0) rotate(90deg); transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease;" />
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── MOBILE MENU OVERLAY ── -->
+  <div class="mobile-overlay">
+    <div class="mobile-overlay-header">
+      <span>Navigation Matrix</span>
+      <span style="display: flex; align-items: center; gap: 0.35rem;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--lime);"></span>
+        Mobile
+      </span>
+    </div>
+
+    <div class="mobile-nav-list">
+      <div class="mobile-nav-item" data-scroll-to="about-section">
+        <div><span class="num">01</span>About</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </div>
+      <div class="mobile-nav-item" data-scroll-to="project-section">
+        <div><span class="num">02</span>Logs</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </div>
+      <div class="mobile-nav-item" data-scroll-to="tech-stack-section">
+        <div><span class="num">03</span>Stack</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </div>
+      <div class="mobile-nav-item" data-scroll-to="capabilities-section">
+        <div><span class="num">04</span>Skills</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </div>
+      <div class="mobile-nav-item" data-scroll-to="contact-section">
+        <div><span class="num">05</span>Connect</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <button class="btn-primary" style="flex: 1; justify-content: center;" data-scroll-to="contact-section">
+        Connect
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+      </button>
+      <button class="nav-theme-btn theme-toggle" aria-label="Toggle dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="modal-close-btn close-mobile-menu" aria-label="Close menu" style="width: 2.75rem; height: 2.75rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── 2. HERO SECTION ── -->
+  <section class="hero-section" id="hero-section">
+    <!-- Background Patterns -->
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-plus-pattern" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M40 38v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z' fill='%23888888' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-bottom-fade"></div>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+      <!-- Location & Live Time Badge -->
+      <div class="hero-location-badge">
+        <span style="font-weight: 700;">Based in Indonesia</span>
+        <span class="sep"></span>
+        <span style="display: flex; align-items: center; gap: 0.4rem;">
+          <span class="live-dot"></span>
+          <span>LOCAL:</span>
+          <strong id="hero-live-time" style="font-weight: 700;">--:--:--</strong>
+        </span>
+      </div>
+
+      <!-- Typography Group with Orbiting Badges -->
+      <div class="hero-title-group">
+        <!-- Orbit 1: Code2 -->
+        <div class="orbit-badge orbit-1" title="Code">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        </div>
+        <!-- Orbit 2: Terminal -->
+        <div class="orbit-badge orbit-2" title="Terminal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <!-- Orbit 3: Server -->
+        <div class="orbit-badge orbit-3" title="Server">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+        </div>
+        <!-- Orbit 4: CPU -->
+        <div class="orbit-badge orbit-4" title="AI / Hardware">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+        </div>
+
+        <h1 class="hero-name-1">MALVIN</h1>
+        <h1 class="hero-name-2">RADITYA</h1>
+      </div>
+
+      <!-- Slogan & Intro -->
+      <h2 class="hero-subtitle">
+        Architecting Intelligent Systems<span style="color: var(--lime);">.</span>
+      </h2>
+      <p class="hero-desc">
+        AI Engineer & Full-Stack Developer building scalable products, from model to interface.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta-group">
+        <button class="btn-primary" data-scroll-to="project-section">
+          View Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+        </button>
+        <button class="btn-secondary open-cv-btn">
+          View CV
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. ABOUT SECTION ── -->
+  <section class="section" id="about-section">
+    <div class="section-inner">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-header-dot"></span>
+        <span class="section-header-title">01 — About</span>
+        <span class="section-header-line"></span>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left Column: Photo & Meta -->
+        <div>
+          <!-- Profile Photo Frame -->
+          <div class="about-photo-wrapper">
+            <div class="about-photo-frame"></div>
+            <img src="assets/profile.webp" alt="Malvin Raditya Nugraha" class="about-photo" loading="lazy" />
+          </div>
+
+          <!-- Status & Location Row -->
+          <div class="about-status-row">
+            <div class="about-status-box">
+              <div class="tag">Status</div>
+              <div class="val">
+                <span style="width: 7px; height: 7px; border-radius: 50%; background: #84cc16; display: inline-block;"></span>
+                Available
+              </div>
+            </div>
+            <div class="about-status-box">
+              <div class="tag">Location</div>
+              <div class="val">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Indonesia
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="about-stats-row">
+            <div class="about-stat-card">
+              <div class="val">BUILD</div>
+              <div class="lbl">Hands-on<br />Approach</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="val">AI+WEB</div>
+              <div class="lbl">Product<br />Stack</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="val">OPEN</div>
+              <div class="lbl">To<br />Collab</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Bio & Capabilities -->
+        <div>
+          <div class="about-eyebrow">Based in Indonesia — Open to Work</div>
+          <h2 class="about-heading">
+            AI Engineer
+            <span class="about-heading-sub">with Full-Stack Product Delivery</span>
+          </h2>
+
+          <div class="about-roles-bar">
+            Machine Learning · NLP · Computer Vision · Full-Stack Delivery
+          </div>
+
+          <div class="about-bio">
+            <p>
+              I'm <strong>Malvin Raditya Nugraha</strong>, an AI Engineer focused on building intelligent systems that are not only innovative, but production-ready and measurable in real-world environments.
+            </p>
+            <p>
+              I specialize in Applied Machine Learning and AI-powered products, with full-stack delivery as a supporting strength to move ideas from prototype to reliable digital products.
+            </p>
+          </div>
+
+          <div style="height: 1px; background: var(--border); margin: 2.5rem 0; max-width: 580px;"></div>
+
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--text-faint); margin-bottom: 0.75rem;">
+            Core Focus & Supporting Skills
+          </div>
+          <div class="about-capabilities-list">
+            <span class="cap-tag">Machine Learning</span>
+            <span class="cap-tag">NLP & Speech Processing</span>
+            <span class="cap-tag">Computer Vision</span>
+            <span class="cap-tag">Full-Stack Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. PROJECT GALLERY ── -->
+  <section class="section" id="project-section">
+    <div class="section-inner">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-header-dot"></span>
+        <span class="section-header-title">02. Past_Explorations</span>
+        <span class="section-header-line"></span>
+      </div>
+
+      <!-- Intro Title -->
+      <div class="gallery-intro">
+        <h2 class="gallery-title">Past<br />Explorations</h2>
+        <p class="gallery-desc">Transforming ideas into real-world applications. Click any card to inspect the complete case study.</p>
+      </div>
+
+      <!-- Grid of Project Cards -->
+      <div class="gallery-grid">
+        <!-- 1. SentimenID -->
+        <article class="project-card" data-slug="sentimenid">
+          <img src="assets/images/projects/sentimenid-frontpage.webp" alt="SentimenID" class="project-card-img" loading="lazy" />
+          <div class="project-card-gradient"></div>
+          <div class="project-card-content">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                NLP / Machine Learning
+              </div>
+              <h3 class="project-card-title">SentimenID</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. VidNote -->
+        <article class="project-card" data-slug="vidnote">
+          <img src="assets/images/projects/vidnote-frontpage.webp" alt="VidNote" class="project-card-img" loading="lazy" />
+          <div class="project-card-gradient"></div>
+          <div class="project-card-content">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                Local AI / Speech Processing
+              </div>
+              <h3 class="project-card-title">VidNote</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Pinjemin -->
+        <article class="project-card" data-slug="pinjemin">
+          <img src="assets/images/projects/pinjemin-frontpage.webp" alt="Pinjemin" class="project-card-img" loading="lazy" />
+          <div class="project-card-gradient"></div>
+          <div class="project-card-content">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                Peer-to-Peer Lending Platform
+              </div>
+              <h3 class="project-card-title">Pinjemin</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Tutorin -->
+        <article class="project-card" data-slug="tutorin">
+          <img src="assets/images/projects/tutorin-frontpage.webp" alt="Tutorin" class="project-card-img" loading="lazy" />
+          <div class="project-card-gradient"></div>
+          <div class="project-card-content">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                Peer Tutoring Platform
+              </div>
+              <h3 class="project-card-title">Tutorin</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. TrashClassifier -->
+        <article class="project-card" data-slug="trashclassifier">
+          <img src="assets/images/projects/trashclassifier-frontpage.webp" alt="TrashClassifier" class="project-card-img" loading="lazy" />
+          <div class="project-card-gradient"></div>
+          <div class="project-card-content">
+            <div>
+              <div class="project-card-category">
+                <span class="dot"></span>
+                Computer Vision
+              </div>
+              <h3 class="project-card-title">TrashClassifier</h3>
+            </div>
+            <div class="project-card-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"/></svg>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. TECH STACK SECTION ── -->
+  <section class="section" id="tech-stack-section">
+    <div class="section-inner">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-header-dot"></span>
+        <span class="section-header-title">03. Technical_Arsenal</span>
+        <span class="section-header-line"></span>
+      </div>
+
+      <div class="stack-layout">
+        <!-- Left Sticky Title -->
+        <div>
+          <h2 class="stack-title">Core<br />Stack.</h2>
+          <p class="stack-desc">
+            An ecosystem of tools and architectures mastered for building scalable, intelligent, and high-performance digital solutions.
+          </p>
+        </div>
+
+        <!-- Right Stack Table -->
+        <div class="stack-table">
+          <!-- Row 1: Languages -->
+          <div class="stack-row">
+            <div class="stack-row-header">
+              <div class="stack-row-name">Languages</div>
+              <div class="stack-row-comment">// Programming languages</div>
+            </div>
+            <div class="stack-skills-icons">
+              <!-- Python -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.75h5.813v.825H3.88s-3.88.44-3.88 5.8c0 5.362 3.39 5.184 3.39 5.184h2.02v-2.844s-.11-3.39 3.33-3.39h5.714v-.85s.51-3.14-3.54-3.14zm-1.74 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zm2.012 22.3c6.094 0 5.714-2.656 5.714-2.656l-.006-2.75h-5.813v-.825h8.14s3.88-.44 3.88-5.8c0-5.362-3.39-5.184-3.39-5.184h-2.02v2.844s.11 3.39-3.33 3.39H9.6v.85s-.51 3.14 3.54 3.14zm1.74-1.7a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z"/></svg>
+                <span class="tooltip">Python</span>
+              </div>
+              <!-- JavaScript -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.221.24 1.05-.645 1.486-1.68 1.41-.75-.09-1.29-.48-1.71-1.08l-1.845 1.066c.33.645.75 1.14 1.26 1.5.795.555 1.8.81 2.896.735 1.155-.075 2.19-.51 2.805-1.245.825-.945.96-2.055.675-3.03l.06-.03zM8.08 19.763c.42.3.84.45 1.38.45.976 0 1.576-.48 1.576-1.77v-8.49H8.725v8.324c0 .6-.18.885-.645.885-.315 0-.585-.12-.87-.33l-.75 1.23-.27.42.87.525c.315.18.66.27 1.02.27v-.525z"/></svg>
+                <span class="tooltip">JavaScript</span>
+              </div>
+              <!-- C -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2.4c-5.3 0-9.6 4.3-9.6 9.6 0 5.3 4.3 9.6 9.6 9.6 4.3 0 8-2.8 9.2-6.8h-4.3c-.9 1.7-2.7 2.8-4.9 2.8-3 0-5.5-2.5-5.5-5.6 0-3.1 2.5-5.6 5.5-5.6 2.1 0 4 1.1 4.9 2.8h4.3c-1.2-4-4.9-6.8-9.2-6.8z"/></svg>
+                <span class="tooltip">C</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: AI & Machine Learning -->
+          <div class="stack-row">
+            <div class="stack-row-header">
+              <div class="stack-row-name">AI & Machine Learning</div>
+              <div class="stack-row-comment">// Intelligent systems & models</div>
+            </div>
+            <div class="stack-skills-icons">
+              <!-- NumPy -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.13 6.42v11.16L12 22.82l-9.13-5.24V6.42L12 1.18l9.13 5.24zM12 3.49L4.87 7.59l3.05 1.75 7.13-4.1-3.05-1.75zm0 17.02l7.13-4.1v-8.2l-7.13 4.1v8.2z"/></svg>
+                <span class="tooltip">NumPy</span>
+              </div>
+              <!-- Pandas -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.23 0H8.77C3.93 0 0 3.93 0 8.77v6.46C0 20.07 3.93 24 8.77 24h6.46c4.84 0 8.77-3.93 8.77-8.77V8.77C24 3.93 20.07 0 15.23 0zm4.5 13.92h-3.81v5.77H11.7V9.61h8.03v4.31zM4.27 4.31h3.81v5.77h4.22v4.31H4.27V4.31z"/></svg>
+                <span class="tooltip">Pandas</span>
+              </div>
+              <!-- PyTorch -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.602.046c-.347.07-.638.31-.767.633L10.3 4.707a.994.994 0 0 0 .918 1.365h.016a.993.993 0 0 0 .927-.638l.966-2.502c4.12 1.127 7.155 4.887 7.155 9.35 0 5.37-4.354 9.724-9.724 9.724A9.725 9.725 0 0 1 .838 12.282c0-4.463 3.035-8.223 7.155-9.35l.966 2.502a.993.993 0 0 0 .927.638h.016a.994.994 0 0 0 .918-1.365L9.285.679A1.002 1.002 0 0 0 8.518.046a11.722 11.722 0 0 0-7.35 12.236c.642 5.926 5.438 10.722 11.364 11.364 6.72.728 12.39-4.57 12.39-11.364 0-5.836-4.298-10.672-9.92-11.536z"/></svg>
+                <span class="tooltip">PyTorch</span>
+              </div>
+              <!-- Scikit-Learn -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="4"/><circle cx="18" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><line x1="9.5" y1="10" x2="15.5" y2="7" stroke="currentColor" stroke-width="1.5"/><line x1="9.5" y1="14" x2="15.5" y2="17" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span class="tooltip">Scikit-Learn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Web Development -->
+          <div class="stack-row">
+            <div class="stack-row-header">
+              <div class="stack-row-name">Web Development</div>
+              <div class="stack-row-comment">// Interactive web interfaces</div>
+            </div>
+            <div class="stack-skills-icons">
+              <!-- React -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(0 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span class="tooltip">React</span>
+              </div>
+              <!-- Tailwind CSS -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+                <span class="tooltip">Tailwind CSS</span>
+              </div>
+              <!-- HTML5 -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.48L12 24l-8.59-2.52L1.5 0zm16.92 6.06H5.58l.42 4.75h11.97l-.46 5.15-5.51 1.53-5.51-1.53-.29-3.29h2.38l.15 1.67 3.27.88 3.27-.88.34-3.79H6.18L5.27 3.73h13.43l-.28 2.33z"/></svg>
+                <span class="tooltip">HTML5</span>
+              </div>
+              <!-- CSS3 -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.48L12 24l-8.59-2.52L1.5 0zm16.95 4.75H5.55l.38 4.3h11.59l-.42 4.75-5.1 1.41-5.1-1.41-.27-3.05H4.28l.45 5.1 7.27 2.02 7.27-2.02.9-10.1.03-.3-.03-.23-.02-.17-.18-.3-.22-.17-.38-.03z"/></svg>
+                <span class="tooltip">CSS3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4: Backend & Database -->
+          <div class="stack-row">
+            <div class="stack-row-header">
+              <div class="stack-row-name">Backend & Database</div>
+              <div class="stack-row-comment">// Scalable server architectures</div>
+            </div>
+            <div class="stack-skills-icons">
+              <!-- Node.js -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l10.39 6v12L12 25.5 1.61 19.5v-12L12 1.5zm0 2.31L3.61 8.43v9.24L12 22.5l8.39-4.83V8.43L12 3.81zm-1.5 5.19h3v7.5h-3V9z"/></svg>
+                <span class="tooltip">Node.js</span>
+              </div>
+              <!-- Express.js -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 18.588l-5.69-7.147 5.485-6.849h-3.377l-3.823 4.887-3.842-4.887h-3.528l5.542 6.849-5.748 7.147h3.396l4.162-5.267 4.143 5.267h3.482zM4.093 11.233h4.636c.214-2.128-.971-3.666-3.023-3.666-1.921 0-3.138 1.419-3.266 3.666zm4.721 1.777H1.543c.128 2.457 1.666 3.752 3.708 3.752 1.543 0 2.686-.677 3.238-1.857h2.247c-.771 2.371-2.924 3.657-5.485 3.657C2.086 18.562 0 15.719 0 12.019c0-3.799 2.143-6.619 5.371-6.619 3.428 0 5.295 2.657 5.295 6.447 0 .457-.029.981-.067 1.163h-1.785z"/></svg>
+                <span class="tooltip">Express.js</span>
+              </div>
+              <!-- FastAPI -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.92 18.65v-5.48H7.95l5.13-7.82v5.48h3.13l-5.13 7.82z"/></svg>
+                <span class="tooltip">FastAPI</span>
+              </div>
+              <!-- MySQL -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6" rx="9" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6v6c0 1.66 4.03 3 9 3s9-1.34 9-3V6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                <span class="tooltip">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 5: Tools & Technologies -->
+          <div class="stack-row">
+            <div class="stack-row-header">
+              <div class="stack-row-name">Tools & Technologies</div>
+              <div class="stack-row-comment">// Development environment</div>
+            </div>
+            <div class="stack-skills-icons">
+              <!-- GitHub -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span class="tooltip">GitHub</span>
+              </div>
+              <!-- VS Code -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.94-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+                <span class="tooltip">VS Code</span>
+              </div>
+              <!-- Google Colab -->
+              <div class="stack-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.941 7.428a5.003 5.003 0 0 0-4.053-2.072 5.003 5.003 0 0 0-4.054 2.072A6.993 6.993 0 0 0 0 14c0 3.866 3.134 7 7 7a6.974 6.974 0 0 0 5.888-3.235A6.974 6.974 0 0 0 18.776 21c3.866 0 7-3.134 7-7 0-3.364-2.374-6.177-5.553-6.842a5.003 5.003 0 0 0-3.282.27z"/></svg>
+                <span class="tooltip">Google Colab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. TECHNICAL CAPABILITIES MATRIX ── -->
+  <section class="section" id="capabilities-section">
+    <div class="section-inner">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-header-dot"></span>
+        <span class="section-header-title">04. Capabilities_Matrix</span>
+        <span class="section-header-line"></span>
+      </div>
+
+      <!-- Title Area -->
+      <div class="capabilities-title-area">
+        <h2 class="capabilities-title">Technical<br />Capabilities.</h2>
+      </div>
+
+      <!-- Matrix Grid -->
+      <div class="matrix-grid">
+        <!-- 01 Machine Learning -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">01</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">1</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">Machine Learning</h3>
+            <p class="matrix-desc">Predictive modeling, regression, and algorithmic classification built for scale.</p>
+          </div>
+        </div>
+
+        <!-- 02 Deep Learning -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">02</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">2</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">Deep Learning</h3>
+            <p class="matrix-desc">Neural architectures for complex pattern recognition and high-accuracy deployments.</p>
+          </div>
+        </div>
+
+        <!-- 03 Computer Vision -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">03</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">3</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">Computer Vision</h3>
+            <p class="matrix-desc">Image processing, real-time object detection, and robust spatial analytics.</p>
+          </div>
+        </div>
+
+        <!-- 04 NLP -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">04</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">4</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">NLP</h3>
+            <p class="matrix-desc">Text processing, semantic analysis, and language understanding for real-world applications.</p>
+          </div>
+        </div>
+
+        <!-- 05 Data Analysis -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">05</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">5</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">Data Analysis</h3>
+            <p class="matrix-desc">Advanced statistical modeling, big data wrangling, and actionable visualizations.</p>
+          </div>
+        </div>
+
+        <!-- 06 Web Engineering -->
+        <div class="matrix-cell">
+          <div class="matrix-top-row">
+            <span class="matrix-num">06</span>
+            <div class="matrix-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="10" x="2" y="3" rx="2"/><path d="M10 21h4"/><path d="M12 17v4"/><rect width="6" height="10" x="16" y="11" rx="1"/></svg>
+            </div>
+          </div>
+          <div class="matrix-watermark">6</div>
+          <div class="matrix-bottom-row">
+            <h3 class="matrix-name">Web Engineering</h3>
+            <p class="matrix-desc">Scalable full-stack systems with ultra-responsive, accessible interfaces.</p>
+          </div>
+        </div>
+
+        <!-- Ghost Cell: Continuously Evolving -->
+        <div class="matrix-cell matrix-ghost">
+          <div class="ghost-spinner">
+            <div class="ghost-dot"></div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 700;">
+            Continuously<br />Evolving
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. FOOTER SECTION ── -->
+  <footer class="footer section" id="contact-section">
+    <div class="section-inner">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-header-dot"></span>
+        <span class="section-header-title">05. Initialize_Contact</span>
+        <span class="section-header-line"></span>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="footer-main-grid">
+        <!-- Left: Big Heading -->
+        <div>
+          <h2 class="footer-heading">
+            LET'S <br />
+            <span>CONNECT.</span>
+          </h2>
+          <p class="footer-desc">
+            Feel free to reach out for collaborations, system architecture discussions, or just to say hello. Always open to exploring new opportunities.
+          </p>
+        </div>
+
+        <!-- Right: Links & Networks -->
+        <div class="footer-links-grid">
+          <!-- Sitemap -->
+          <div>
+            <div class="footer-col-title">Sitemap</div>
+            <div class="footer-nav-list">
+              <button class="footer-nav-btn" data-scroll-to="about-section">
+                <span class="footer-nav-dot"></span> About
+              </button>
+              <button class="footer-nav-btn" data-scroll-to="project-section">
+                <span class="footer-nav-dot"></span> Projects
+              </button>
+              <button class="footer-nav-btn" data-scroll-to="tech-stack-section">
+                <span class="footer-nav-dot"></span> Stack
+              </button>
+              <button class="footer-nav-btn" data-scroll-to="capabilities-section">
+                <span class="footer-nav-dot"></span> Capabilities
+              </button>
+            </div>
+          </div>
+
+          <!-- Networks -->
+          <div>
+            <div class="footer-col-title">Networks</div>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=malvinraditya2007@gmail.com" target="_blank" rel="noreferrer" class="footer-social-card">
+                <div class="icon-group">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  Email
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+              </a>
+
+              <a href="https://github.com/malvinraditya2007" target="_blank" rel="noreferrer" class="footer-social-card">
+                <div class="icon-group">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  GitHub
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+              </a>
+
+              <a href="https://www.linkedin.com/in/malvin-raditya-nugraha/" target="_blank" rel="noreferrer" class="footer-social-card">
+                <div class="icon-group">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  LinkedIn
+                </div>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span>SYS.STATUS:</span>
+          <div class="sys-online-badge">ONLINE</div>
+        </div>
+
+        <div id="footer-live-time">00:00:00 LOCAL</div>
+
+        <div>&copy; 2026 MALVIN. ALL RIGHTS RESERVED.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── 8. MODAL: CV PREVIEW ── -->
+  <div class="modal-overlay" id="cv-modal">
+    <div class="modal-panel">
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-title">Malvin Raditya - CV</div>
+        <div class="modal-actions">
+          <a href="assets/Malvin-Raditya-CV.pdf" download="Malvin-Raditya-CV.pdf" class="btn-primary" style="padding: 0.45rem 1rem; font-size: 0.72rem;">
+            Download
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+          <button class="modal-close-btn close-cv-btn" aria-label="Close CV preview">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Image Body -->
+      <div class="modal-body" style="display: flex; justify-content: center; background: rgba(0,0,0,0.03);">
+        <img src="assets/Malvin-Raditya-CV.webp" alt="Malvin Raditya CV" style="border-radius: 4px; box-shadow: var(--shadow-lg); max-width: 680px; width: 100%; height: auto;" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 9. MODAL: PROJECT CASE STUDY ── -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-panel case-modal-panel">
+      <!-- Sticky Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title" id="case-category">Category</div>
+        <button class="modal-close-btn close-project-btn" aria-label="Close case study">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Case Study Content -->
+      <div class="modal-body">
+        <div class="case-modal-hero">
+          <div class="case-modal-category">Project Case Study</div>
+          <h2 class="case-modal-title" id="case-title">Project Title</h2>
+          <p class="case-modal-tagline" id="case-tagline">Tagline description</p>
+
+          <div class="case-modal-btns" id="case-links-wrap">
+            <!-- Dynamic live and repo links -->
+          </div>
+        </div>
+
+        <!-- Cover Image -->
+        <div class="case-modal-img-wrap">
+          <img id="case-hero-img" src="" alt="" style="width: 100%; height: auto; display: block;" />
+        </div>
+
+        <!-- Key Features and Impact Grid -->
+        <div class="case-modal-grid">
+          <div>
+            <div class="case-modal-section-title">
+              <span style="width: 16px; height: 1px; background: var(--border-strong);"></span>
+              Key Features
+            </div>
+            <ul class="case-modal-list" id="case-features-list"></ul>
+          </div>
+
+          <div>
+            <div class="case-modal-section-title">
+              <span style="width: 16px; height: 1px; background: var(--border-strong);"></span>
+              Outcome & Impact
+            </div>
+            <ul class="case-modal-list" id="case-impact-list"></ul>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="case-badge-wrap" id="case-stack-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla Script -->
+  <script src="script.js"></script>
+</body>
 </html>
