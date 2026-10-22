@@ -184,7 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initMobileMenu();
   initModals();
-  initCapabilitiesCascade();
 });
 
 // ── 1. Theme Management (Light / Dark) ──
@@ -501,38 +500,4 @@ function populateProjectModal(project) {
     badge.textContent = tech;
     stackWrap.appendChild(badge);
   });
-}
-
-// ── 7. Capabilities Matrix Sequential Cascade Effect ──
-function initCapabilitiesCascade() {
-  const section = document.getElementById("capabilities-section");
-  const cells = document.querySelectorAll(".matrix-cell");
-  if (!section || cells.length === 0) return;
-
-  let hasTriggered = false;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasTriggered) {
-          hasTriggered = true;
-          runCascade();
-        }
-      });
-    },
-    { threshold: 0.25 }
-  );
-
-  observer.observe(section);
-
-  function runCascade() {
-    cells.forEach((cell, idx) => {
-      setTimeout(() => {
-        cell.classList.add("cascade-active");
-        setTimeout(() => {
-          cell.classList.remove("cascade-active");
-        }, 500);
-      }, idx * 180);
-    });
-  }
 }

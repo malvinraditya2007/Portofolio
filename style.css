@@ -1152,13 +1152,11 @@ html.dark .hero-name-2 {
   }
 }
 
-.matrix-cell:hover,
-.matrix-cell.cascade-active {
+.matrix-cell:hover {
   background: #0A0A0A !important;
 }
 
-.matrix-cell:hover *,
-.matrix-cell.cascade-active * {
+.matrix-cell:hover * {
   color: var(--lime) !important;
   border-color: var(--lime) !important;
 }
