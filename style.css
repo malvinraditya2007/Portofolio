@@ -1496,8 +1496,53 @@ html.dark .hero-name-2 {
 
 .modal-body {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 1.5rem;
+}
+
+/* CV Modal Specific Styles */
+.cv-modal-panel {
+  max-width: 840px;
+  height: 88vh;
+}
+
+.cv-modal-body {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg-card-subtle);
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Crucial: stops vertical stretching */
+}
+
+@media (min-width: 640px) {
+  .cv-modal-body {
+    padding: 2rem;
+  }
+}
+
+.cv-img-wrapper {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cv-preview-img {
+  width: 100%;
+  height: auto !important; /* Preserves natural A4 aspect ratio */
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
 }
 
 /* Case Study Specific Modal */

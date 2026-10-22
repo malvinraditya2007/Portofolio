@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=1.1" />
+  <link rel="stylesheet" href="style.css?v=1.2" />
 </head>
 <body>
 
@@ -757,7 +757,7 @@
 
   <!-- ── 8. MODAL: CV PREVIEW ── -->
   <div class="modal-overlay" id="cv-modal">
-    <div class="modal-panel">
+    <div class="modal-panel cv-modal-panel">
       <!-- Header -->
       <div class="modal-header">
         <div class="modal-title">Malvin Raditya - CV</div>
@@ -771,9 +771,11 @@
           </button>
         </div>
       </div>
-      <!-- Image Body -->
-      <div class="modal-body" style="display: flex; justify-content: center; background: rgba(0,0,0,0.03);">
-        <img src="assets/Malvin-Raditya-CV.webp" alt="Malvin Raditya CV" style="border-radius: 4px; box-shadow: var(--shadow-lg); max-width: 680px; width: 100%; height: auto;" />
+      <!-- Image Body (Scrollable, Preserves A4 Proportions) -->
+      <div class="cv-modal-body">
+        <div class="cv-img-wrapper">
+          <img src="assets/Malvin-Raditya-CV.webp" alt="Malvin Raditya CV" class="cv-preview-img" loading="eager" />
+        </div>
       </div>
     </div>
   </div>
