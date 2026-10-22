@@ -996,6 +996,19 @@ html.dark .hero-name-2 {
   .stack-row {
     flex-direction: row;
     align-items: center;
+    gap: 2rem;
+  }
+
+  .stack-row-header {
+    width: 270px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stack-row-header {
+    width: 320px;
+    flex-shrink: 0;
   }
 }
 
