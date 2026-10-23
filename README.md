@@ -90,7 +90,6 @@ Portofolio/
 │   ├── Malvin-Raditya-CV.pdf
 │   ├── Malvin-Raditya-CV.webp
 │   └── images/          # Project covers, previews, & thumbnails
-├── vercel.json          # Static hosting configuration for Vercel
 └── README.md            # Project documentation
 ```
 
