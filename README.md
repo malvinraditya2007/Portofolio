@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
-Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-Stack Developer based in Indonesia. Designed with a dark engineering and cyberpunk-inspired aesthetic, high performance, and smooth micro-interactions.
+Personal portfolio website of **Malvin Raditya Nugraha** — AI & Software Engineer specializing in Machine Learning and Software Development. Designed with a clean editorial & engineering aesthetic, high performance, and smooth micro-interactions.
 
 > [!NOTE]
 > This website is built using **pure Vanilla HTML5, modern CSS3, and ES6+ JavaScript** with zero external dependencies and zero bundlers. The previous React 19 version is preserved on the [`react-version`](../../tree/react-version) branch.
@@ -30,10 +30,10 @@ Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-
 ## 🛠️ Core Tech Stack
 
 ### 💻 Programming Languages
-`Python` • `JavaScript` • `Java` • `C`
+`Python` • `JavaScript` • `C`
 
 ### 🧠 AI & Machine Learning
-`NumPy` • `Pandas` • `Scikit-learn` • `PyTorch (Basic)`
+`NumPy` • `Pandas` • `Scikit-learn`
 
 ### 🌐 Web & Frontend
 `HTML5` • `CSS3` • `JavaScript (ES6+)`
@@ -53,11 +53,11 @@ Personal portfolio website of **Malvin Raditya Nugraha** — AI Engineer & Full-
 
 | Project | Category | Description | Stack |
 | :--- | :--- | :--- | :--- |
-| **SentimenID** | Machine Learning / Web | Intelligent sentiment analysis engine for text classification | Python, Scikit-learn, Streamlit, JS |
-| **Pinjemin** | Web Application | Digital peer-to-peer equipment and asset lending portal | Node.js, Express, MySQL |
-| **Tutorin** | EdTech Platform | Peer-to-peer mentorship and academic learning system | JavaScript, Express, MySQL |
-| **TrashClassifier** | Deep Learning / Vision | Computer vision system for automatic recyclable waste sorting | PyTorch, Python, OpenCV |
-| **EUR/USD Prediction** | Machine Learning / Quant | Short-term forex close price prediction with Multiple Linear Regression | Python, NumPy, Pandas, Streamlit |
+| **SentimenID** | NLP / Machine Learning | A web app that detects hate speech and abusive language in Indonesian tweets | Python, Scikit-learn, Streamlit |
+| **TrashClassifier** | Computer Vision | A web app that classifies waste photos into paper, glass, and plastic | Python, Scikit-learn, OpenCV, Streamlit |
+| **Pinjemin** | Peer-to-Peer Lending Platform | A peer-to-peer platform for neighbors to lend and borrow items | Node.js, Express.js, HTML, CSS, JavaScript |
+| **EUR/USD Prediction** | Time Series / Quantitative ML | A web app that predicts the next 15-minute Close price of EUR/USD | Python, NumPy, Scikit-learn, Streamlit |
+| **Tutorin** | Peer Tutoring Platform | A peer tutoring platform connecting students with mentors for 1-on-1 online sessions | MySQL, Node.js, Express.js |
 
 ---
 

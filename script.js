@@ -12,60 +12,106 @@ const PROJECTS_DATA = {
     category: "NLP / Machine Learning",
     role: "Project Lead & ML Engineer",
     team: "Team of 3",
+    period: "Mar 2026 - Jun 2026",
     contributions: [
-      "Led a team of 3 to build an end-to-end ML pipeline, from preprocessing to a Streamlit app for tweet classification.",
-      "Built and compared KNN, Logistic Regression, Naive Bayes, and Random Forest with Count and TF-IDF, reaching 76.4% F1-score."
+      "Led development of a tweet sentiment classifier, from data preprocessing to final evaluation.",
+      "Built and compared KNN, Logistic Regression, Naive Bayes, and Random Forest using Count and TF-IDF features, achieving a 76.4% F1-score."
     ],
     heroImg: "assets/images/projects/sentimenid-inside.webp",
     frontImg: "assets/images/projects/sentimenid-frontpage.webp",
-    tagline: "A web app that detects hate speech and abusive language in Indonesian tweets using classical machine learning models.",
+    tagline: "A web app that detects hate speech and abusive language in Indonesian tweets.",
     year: "2026",
     stack: [
       "Python",
       "Scikit-learn",
       "Count Vectorizer / TF-IDF",
       "Streamlit",
-      "Model Serialization (Pickle)"
+      "Hugging Face Spaces"
     ],
     features: [
       "Text input for instant hate speech and abusive language detection.",
       "Four models compared: KNN, Logistic Regression, Naive Bayes, and Random Forest.",
-      "Count and TF-IDF feature extraction to test which representation performs best.",
-      "Pre-trained models and vectorizers saved for fast inference in the app."
+      "Count and TF-IDF feature extraction to evaluate which text representation performs best.",
+      "Pre-trained models and vectorizers saved for real-time inference in the app."
     ],
     impact: [
-      "Helps flag harmful Indonesian-language content on social media.",
-      "Shows how different models and text features perform on the same dataset.",
-      "Can serve as a starting point for content moderation tools."
+      "Helps detect and flag harmful Indonesian-language content on social platforms.",
+      "Provides transparent performance comparisons across classical ML algorithms on the same dataset.",
+      "Serves as an effective baseline for automated content moderation workflows."
     ],
     links: {
       live: "https://huggingface.co/spaces/MalvinR/SentimenID",
       repo: "https://github.com/malvinraditya2007/SentimenID"
     }
   },
-  pinjemin: {
+  trashclassifier: {
     id: 2,
+    slug: "trashclassifier",
+    title: "TrashClassifier",
+    category: "Computer Vision",
+    role: "Machine Learning Engineer",
+    team: "Team of 5",
+    period: "Apr 2026 - Jun 2026",
+    contributions: [
+      "Built a feature extraction pipeline (1,734 features: color, texture, shape) to classify paper, glass, and plastic waste.",
+      "Added image augmentation (6 variants per photo) with OpenCV and sped up processing using parallel computing."
+    ],
+    heroImg: "assets/images/projects/trashclassifier-inside.webp",
+    frontImg: "assets/images/projects/trashclassifier-frontpage.webp",
+    tagline: "A web app that classifies waste photos into paper, glass, and plastic.",
+    year: "2026",
+    stack: [
+      "Python",
+      "Scikit-learn",
+      "OpenCV",
+      "Joblib",
+      "SVM",
+      "Streamlit",
+      "Hugging Face Spaces"
+    ],
+    features: [
+      "Photo upload with instant classification into paper, glass, and plastic waste categories.",
+      "Comprehensive 1,734-feature extraction pipeline combining color, texture, and shape descriptors.",
+      "Robust image augmentation generating 6 variants per photo using OpenCV.",
+      "Accelerated feature computation utilizing parallel computing via Joblib.",
+      "Grouped 5-fold cross-validation preventing data leakage across augmented samples."
+    ],
+    impact: [
+      "Supports automated and accurate recycling sorting workflows.",
+      "Demonstrates high-performance classical computer vision pipeline without requiring heavy deep neural nets.",
+      "Spreads awareness on proper recyclable waste separation through an accessible web tool."
+    ],
+    links: {
+      live: "https://huggingface.co/spaces/Gutstavo/TrashClassifier",
+      repo: "https://github.com/malvinraditya2007/TrashClassifier"
+    }
+  },
+  pinjemin: {
+    id: 3,
     slug: "pinjemin",
     title: "Pinjemin",
     category: "Peer-to-Peer Lending Platform",
     role: "Project Lead & Full-Stack Developer",
     team: "Team of 5",
+    period: "Feb 2026 - May 2026",
     contributions: [
-      "Led a team of 5 to build a lending platform, developing the REST APIs for the borrow request, owner approval, and item return flow.",
+      "Led development of a peer-to-peer lending platform, building REST APIs (Node.js, Express) for the borrow request, owner approval, and item return flow.",
       "Built the frontend with HTML, CSS, and JavaScript, including an interactive Leaflet.js location map."
     ],
     heroImg: "assets/images/projects/pinjemin-inside.webp",
     frontImg: "assets/images/projects/pinjemin-frontpage.webp",
-    tagline: "A neighborhood platform for borrowing and lending items, with owner approval and nearby-item search on an interactive map.",
+    tagline: "A peer-to-peer platform for neighbors to lend and borrow items.",
     year: "2026",
     stack: [
       "Node.js",
       "Express.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Leaflet.js",
       "PostgreSQL (NeonDB)",
       "Prisma",
-      "Leaflet.js",
-      "JWT / bcrypt",
-      "Vanilla JS"
+      "JWT / bcrypt"
     ],
     features: [
       "Borrow workflow: request, owner approval, active status, and return.",
@@ -84,30 +130,71 @@ const PROJECTS_DATA = {
       repo: "https://github.com/malvinraditya2007/Pinjemin"
     }
   },
+  eurusd: {
+    id: 4,
+    slug: "eurusd",
+    title: "EUR/USD Close Price Prediction",
+    category: "Time Series / Quantitative ML",
+    role: "Machine Learning Engineer",
+    team: "Team of 5",
+    period: "Apr 2026 - Jun 2026",
+    contributions: [
+      "Built a linear regression model (NumPy, gradient descent) and a naive baseline to forecast next-candle price on 100K rows of OHLC data.",
+      "Evaluated both using RMSE, MAE, R², and MAPE on a chronological train/test split."
+    ],
+    heroImg: "assets/images/projects/eurusd-inside.webp",
+    frontImg: "assets/images/projects/eurusd-frontpage.webp",
+    tagline: "A web app that predicts the next 15-minute Close price of EUR/USD.",
+    year: "2026",
+    stack: [
+      "Python",
+      "NumPy",
+      "Scikit-learn",
+      "Pandas",
+      "Gradient Descent",
+      "Streamlit",
+      "Hugging Face Spaces"
+    ],
+    features: [
+      "Multiple Linear Regression implemented from scratch in pure NumPy without third-party ML training models.",
+      "Weights and bias optimized via Gradient Descent minimizing Mean Squared Error (1,000 iterations, learning rate 0.1).",
+      "Time-shift feature engineering (predicting Close at t+1) with chronological 70/30 train-test split on 100K rows of OHLC data.",
+      "Leakage-free Min-Max normalization computed strictly on the training set.",
+      "Comprehensive Exploratory Data Analysis (EDA) with OHLC distributions, Pearson correlation heatmaps, scatter plots, and yearly boxplots.",
+      "Interactive Streamlit web app deployed on Hugging Face Spaces with live OHLC form input and trend signals (UPTREND / DOWNTREND)."
+    ],
+    impact: [
+      "Provides short-term forex direction forecasting while outperforming naive baselines.",
+      "Demonstrates core mathematical ML principles from first principles using pure vector math in NumPy.",
+      "Offers actionable visual trading signals and price delta calculations."
+    ],
+    links: {
+      live: "https://huggingface.co/spaces/MalvinR/EURUSD_Prediction_App",
+      repo: "https://github.com/malvinraditya2007/EUR-USD-Prediction"
+    }
+  },
   tutorin: {
-    id: 3,
+    id: 5,
     slug: "tutorin",
     title: "Tutorin",
     category: "Peer Tutoring Platform",
     role: "Backend & Database Developer",
-    team: "Team of 3",
+    team: "Team of 5",
+    period: "Dec 2025 - Mar 2026",
     contributions: [
-      "Designed the MySQL schema with seed data for mentors, subjects, slots, and reviews.",
-      "Built the mentor flow covering profile onboarding, availability slot management, session completion, and wallet earnings with withdrawals."
+      "Designed a normalized relational MySQL schema (15 tables, 21 foreign keys, 13 indexes) covering users, mentors, bookings, payments, reviews, and wallets."
     ],
     heroImg: "assets/images/projects/tutorin-inside.webp",
     frontImg: "assets/images/projects/tutorin-frontpage.webp",
-    tagline: "A commercial 1-on-1 peer tutoring platform connecting students with high-achieving mentors, with escrow payments and sessions run over Discord.",
+    tagline: "A peer tutoring platform connecting students with mentors for 1-on-1 online sessions.",
     year: "2026",
     stack: [
-      "React 19",
-      "React Router 7",
-      "Vite",
-      "Tailwind CSS v4",
+      "MySQL",
+      "Node.js",
       "Express.js",
-      "Raw SQL (mysql2)",
-      "MySQL 8",
-      "JWT / bcryptjs",
+      "React",
+      "Tailwind CSS",
+      "JWT / bcrypt",
       "Zod"
     ],
     features: [
@@ -125,89 +212,6 @@ const PROJECTS_DATA = {
     ],
     links: {
       repo: "https://github.com/malvinraditya2007/Tutorin"
-    }
-  },
-  trashclassifier: {
-    id: 4,
-    slug: "trashclassifier",
-    title: "TrashClassifier",
-    category: "Computer Vision",
-    role: "Machine Learning Engineer",
-    team: "Team of 5",
-    contributions: [
-      "Built an OpenCV augmentation pipeline (6 variants per image) with parallelized feature extraction via joblib.",
-      "Prevented data leakage by grouping augmented copies by source image for grouped 5-fold CV."
-    ],
-    heroImg: "assets/images/projects/trashclassifier-inside.webp",
-    frontImg: "assets/images/projects/trashclassifier-frontpage.webp",
-    tagline: "An SVM-based waste image classifier that reaches 89.5% accuracy, served through a Streamlit web app.",
-    year: "2026",
-    stack: [
-      "Python",
-      "Scikit-learn",
-      "OpenCV",
-      "Joblib",
-      "SVM",
-      "Streamlit",
-      "Hugging Face Spaces"
-    ],
-    features: [
-      "Image upload with instant waste category prediction.",
-      "OpenCV preprocessing and augmentation pipeline before feature extraction.",
-      "SVM model tuned with grouped 5-fold cross-validation for reliable evaluation.",
-      "Deployed on Hugging Face Spaces for online access."
-    ],
-    impact: [
-      "Supports faster and more accurate waste sorting.",
-      "Raises awareness about proper waste separation through a simple demo.",
-      "Demonstrates a complete pipeline from preprocessing to deployment."
-    ],
-    links: {
-      live: "https://huggingface.co/spaces/Gutstavo/TrashClassifier",
-      repo: "https://github.com/malvinraditya2007/TrashClassifier"
-    }
-  },
-  eurusd: {
-    id: 5,
-    slug: "eurusd",
-    title: "EUR/USD Price Prediction",
-    category: "Time Series / Quantitative ML",
-    role: "Machine Learning Engineer",
-    team: "Team of 5",
-    contributions: [
-      "Preprocessed OHLC data with time-shift features, chronological split, and leakage-free Min-Max scaling.",
-      "Documented the full ML pipeline in a 10-section notebook and README."
-    ],
-    heroImg: "assets/images/projects/eurusd-inside.webp",
-    frontImg: "assets/images/projects/eurusd-frontpage.webp",
-    tagline: "A machine learning project that predicts the next 15-minute candle Close price of EUR/USD using Multiple Linear Regression built from scratch with Gradient Descent.",
-    year: "2026",
-    stack: [
-      "Python",
-      "NumPy",
-      "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "Gradient Descent",
-      "Streamlit",
-      "Hugging Face Spaces"
-    ],
-    features: [
-      "Multiple Linear Regression implemented from scratch in pure NumPy without third-party ML training models.",
-      "Weights and bias optimized via Gradient Descent minimizing Mean Squared Error (1,000 iterations, learning rate 0.1).",
-      "Time-shift feature engineering (predicting Close at t+1) with chronological 70/30 train-test split.",
-      "Leakage-free Min-Max normalization computed strictly on the training set.",
-      "Comprehensive Exploratory Data Analysis (EDA) with OHLC distributions, Pearson correlation heatmaps, scatter plots, and yearly boxplots.",
-      "Interactive Streamlit web app deployed on Hugging Face Spaces with live OHLC form input and trend signals (UPTREND / DOWNTREND)."
-    ],
-    impact: [
-      "Provides short-term forex direction forecasting while outperforming naive baselines.",
-      "Demonstrates core mathematical ML principles from first principles using pure vector math in NumPy.",
-      "Offers actionable visual trading signals and price delta calculations."
-    ],
-    links: {
-      live: "https://huggingface.co/spaces/MalvinR/EURUSD_Prediction_App",
-      repo: "https://github.com/malvinraditya2007/EUR-USD-Prediction"
     }
   }
 };
@@ -478,6 +482,9 @@ function populateProjectModal(project) {
 
   const teamEl = document.getElementById("case-team");
   if (teamEl) teamEl.textContent = project.team || "";
+
+  const periodEl = document.getElementById("case-period");
+  if (periodEl) periodEl.textContent = project.period || project.year || "";
 
   const heroImg = document.getElementById("case-hero-img");
   if (heroImg) {

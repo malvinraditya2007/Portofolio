@@ -1183,7 +1183,7 @@ html.dark .hero-name-2 {
   border-right: 2px solid var(--border-matrix);
   border-bottom: 2px solid var(--border-matrix);
   padding: 1.5rem;
-  min-height: 220px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1195,7 +1195,7 @@ html.dark .hero-name-2 {
 @media (min-width: 768px) {
   .matrix-cell {
     padding: 2.25rem;
-    min-height: 320px;
+    min-height: 290px;
   }
 }
 
@@ -1665,7 +1665,8 @@ html.dark .hero-name-2 {
   color: var(--border-strong);
 }
 
-.case-modal-role-pill #case-team {
+.case-modal-role-pill #case-team,
+.case-modal-role-pill #case-period {
   color: var(--text-muted);
 }
 
