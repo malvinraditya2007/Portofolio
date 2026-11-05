@@ -708,8 +708,8 @@ html.dark .hero-name-2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 44% 42%;
-  transform: scale(1.65);
+  object-position: 40% 42%;
+  transform: scale(1.73);
 }
 
 .about-status-row {
